@@ -1,4 +1,4 @@
-# Viele Schöne Bilder
+# Dockerized React setup
 
 ## Use in production
 ```
