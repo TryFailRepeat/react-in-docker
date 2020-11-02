@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+
+  react-in-docker:
+    container_name: react-in-docker
+    build:
+      context: .
+      dockerfile: ./react-in-docker/Dockerfile
+    ports:
+      - ${PORT_PROD}:${PORT_PROD}
+    environment:
+      - NODE_ENV=development
+      - PORT=${PORT_PROD}

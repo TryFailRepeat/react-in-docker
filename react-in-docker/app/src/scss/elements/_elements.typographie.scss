@@ -1,0 +1,21 @@
+h1,
+h1 a {
+    @include default-h1-font-size;
+    @include smart-break;
+    text-align: center;
+
+    @include hocus {
+        text-decoration: none;
+    }
+}
+
+p,
+p a {
+    @include default-text-font-size;
+    @include smart-break;
+    text-align: center;
+
+    @include hocus {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,70 @@
+/*
+*   ITCSS: SCALABLE AND MAINTAINABLE CSS ARCHITECTURE
+*   references:
+*      - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+*      - http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+*
+*   this is also the entry point for all the custom css
+*   it wil override the default liferay css the theme inherits from
+*
+*/
+/*
+*   used with preprocessors and contain font, colors definitions, etc.
+*/
+@import 'settings/settings.global';
+@import 'settings/settings.colors';
+@import 'settings/settings.font-sizes';
+@import 'settings/settings.fonts';
+@import 'settings/settings.global';
+@import 'settings/settings.typographie';
+@import 'settings/settings.z-index';
+
+/*
+*   globally used mixins and functions.
+*   It’s important not to output any CSS in the first 2 layers
+*/
+@import "tools/functions/strip-unit";
+@import "tools/functions/z-index";
+
+@import "tools/mixins/absolute";
+@import "tools/mixins/centering";
+@import "tools/mixins/clearfix";
+@import "tools/mixins/fixed";
+@import "tools/mixins/flex-center";
+@import "tools/mixins/font-size";
+@import "tools/mixins/hocus";
+@import "tools/mixins/rem";
+@import "tools/mixins/smart-break";
+@import "tools/mixins/unstyled-list";
+
+/*
+*   reset and/or normalize styles, box-sizing definition, etc.
+*/
+@import "generic/generic.box-sizing";
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+
+/*
+*   These are bare, unclassed HTML elements (like H1, A, etc.).
+*   Redefine the default browser definitions
+*/
+@import 'elements/elements.page';
+@import 'elements/elements.typographie';
+
+/*
+*   This is the first layer in which we find class-based selectors. These are concerned with styling non-cosmetic
+*   design patterns, or 'objects'. Objects can range from something as simple as a .wrapper element, to layout systems,
+*   through to things like the OOCSS poster child – the Media Object
+*/
+@import 'objects/objects.icon';
+@import 'objects/objects.main-content';
+
+/*
+*   Specific UI components. This layer is more explicit than the last one in that we are now styling explicit,
+*   designed pieces of the DOM
+*/
+
+/*
+*   High specificity selectors
+*   individual themes might be applied here
+*/

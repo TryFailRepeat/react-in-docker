@@ -1,0 +1,25 @@
+//
+// layering function
+// -----------------
+//
+// This function is used for managing z-index layers within a Sass map.
+//
+// Usage:
+//
+// Define your Sass map in variables/_z-layers.scss, e.g.
+//
+// $z-layers: (
+//     "modal"  : 100,
+//     "default": 1
+// );
+//
+// Sample input:
+// .class {
+//     position: absolute;
+//     z-index: z-index("default");
+// }
+//
+
+@function z-index($key) {
+    @return map-get($z-index, $key);
+}

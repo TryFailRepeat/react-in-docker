@@ -1,0 +1,33 @@
+// set absolute position
+
+@mixin fixed($scope: 'all') {
+    position: fixed;
+
+    @if $scope == "top-left" {
+        top: 0;
+        left: 0;
+    }
+
+    @if $scope == "top-right" {
+        top: 0;
+        right: 0;
+    }
+
+    @if $scope == "bottom-left" {
+        bottom: 0;
+        left: 0;
+    }
+
+    @if $scope == "bottom-right" {
+        bottom: 0;
+        right: 0;
+    }
+
+    @if $scope == "all" {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+}

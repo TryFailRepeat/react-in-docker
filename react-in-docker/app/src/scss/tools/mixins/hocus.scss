@@ -1,0 +1,9 @@
+// Generate `:hover` and `:focus` styles in one go.
+@mixin hocus() {
+
+  &:active,
+  &:hover,
+  &:focus {
+      @content;
+  }
+}

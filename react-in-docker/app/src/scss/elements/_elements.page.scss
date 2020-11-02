@@ -1,0 +1,16 @@
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+*/
+
+html {
+  font-size: ($global-font-size / 16px) * 1em;
+  line-height: $global-line-height;
+  font-family: $global-font-family;
+}
+
+body {
+  font-size: rem($global-body-font-size);
+  line-height: $global-line-height;
+  color: $text-default-color;
+  background-color: $global-background-color;
+}

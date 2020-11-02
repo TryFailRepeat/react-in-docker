@@ -1,0 +1,99 @@
+{
+  "name": "cms-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "WEBPACK_MODE=production webpack --mode production --config config/webpack.config.js",
+    "build:server": "WEBPACK_MODE=production webpack --mode production --config config/webpack.config.server.js",
+    "build": "npm run build:client && npm run build:server",
+    "serve": "WEBPACK_MODE=development webpack-dev-server --host 0.0.0.0 --config config/webpack.config.js --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.6.3",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/redux-logger": "^3.0.8",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-react-html-attrs": "^2.1.0",
+    "babel-plugin-webpack-alias": "^2.1.2",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.12.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-webpack-plugin": "^2.1.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "svg-spritemap-webpack-plugin": "^3.5.10",
+    "ts-loader": "^8.0.7",
+    "typed-react-markdown": "^0.1.0",
+    "typescript": "^4.0.5",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.2.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^6.1.1",
+    "redux-thunk": "^2.3.0",
+    "remark-breaks": "^2.0.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "browsers": [
+              "> 1%",
+              "last 2 versions"
+            ]
+          }
+        }
+      ],
+      [
+        "@babel/preset-react"
+      ],
+      [
+        "@babel/preset-flow"
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "react-html-attrs"
+      ]
+    ]
+  }
+}

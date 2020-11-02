@@ -1,0 +1,27 @@
+
+// for calculation purpose (rem mixin)
+$global-font-size:                  10px !default;
+$global-line-height:                1.5 !default;
+
+$global-body-font-size:             14 !default;
+$global-body-font-size-mobile:      $global-body-font-size !default;
+$global-body-line-height:           (20 / $global-body-font-size) !default;
+$global-body-font-weight:           300 !default;
+$global-body-letter-spacing:        normal !default;
+
+// headings
+$global-h1-font-size:               48 !default;
+$global-h1-font-size-mobile:        22 !default;
+$global-h1-line-height:             (62 / $global-h1-font-size) !default;
+$global-h1-font-weight:             300 !default;
+$global-h1-letter-spacing:          $global-body-letter-spacing !default;
+$global-h1-color:                   $headline-default-color !default;
+$global-h1-spacing:                 0 !default;
+
+$global-text-font-size:             $global-body-font-size !default;
+$global-text-font-size-mobile:      $global-text-font-size !default;
+$global-text-line-height:           $global-body-line-height !default;
+$global-text-font-weight:           $global-body-font-weight !default;
+$global-text-letter-spacing:        $global-body-letter-spacing !default;
+$global-text-color:                 $text-default-color !default;
+$global-text-spacing:               1em !default;

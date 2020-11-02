@@ -1,0 +1,25 @@
+@mixin default-h1-font-size {
+  font-size: rem($global-h1-font-size);
+  line-height: $global-h1-line-height;
+  margin-bottom: rem($global-h1-spacing);
+  font-weight: $global-h1-font-weight;
+  letter-spacing: $global-h1-letter-spacing;
+  color: $global-h1-color;
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+}
+
+@mixin default-text-font-size {
+  font-size: rem($global-text-font-size);
+  line-height: $global-text-line-height;
+  margin-bottom: rem($global-text-spacing);
+  font-weight: $global-text-font-weight;
+  letter-spacing: $global-text-letter-spacing;
+  color: $global-text-color;
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+}

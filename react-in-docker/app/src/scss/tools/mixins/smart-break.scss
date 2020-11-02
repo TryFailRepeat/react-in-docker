@@ -1,0 +1,7 @@
+// To prevent overflow, word may be broken at arbitrary points
+// Requires language definition on html
+
+@mixin smart-break {
+    word-break: break-word;
+    hyphens: auto;
+}

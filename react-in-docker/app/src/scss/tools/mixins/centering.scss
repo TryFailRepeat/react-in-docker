@@ -1,0 +1,33 @@
+// a css3 method of centering containers
+// inside relatively positioned parent containers
+// see example at https://www.w3.org/Style/Examples/007/center.en.html
+
+@mixin centering($scope, $position: 'absolute') {
+    position: unquote($position);
+
+    @if $scope == "horizontal" {
+        left: 50%;
+        transform: translateX(-50%);
+
+        html[dir="rtl"] & {
+            // left/right properties will be reversed through the build process
+            transform: translateX(50%);
+        }
+    }
+
+    @if $scope == "vertical" {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @if $scope == "horizontal-and-vertical" {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        html[dir="rtl"] & {
+            // left/right properties will be reversed through the build process
+            transform: translate(50%, -50%);
+        }
+    }
+}
